@@ -7,6 +7,9 @@ A minimal Node.js + Express starter project demonstrating basic HTMX interaction
 - Add, toggle, and delete todo items using HTMX requests.
 - Static assets served from `public/` (CSS, client files).
 
+## Screenshot
+<img width="897" height="825" alt="image" src="https://github.com/user-attachments/assets/a1baf52e-917d-40b1-a074-edc7fea57c4c" />
+---
 ## Prerequisites
 - Node.js (v14+ recommended)
 - npm
@@ -56,8 +59,6 @@ The server listens on port `3000` by default. Open `http://localhost:3000` in yo
 ## Contributing
 Feel free to open issues or submit PRs to improve examples and documentation.
 
-## Screenshot
-<img width="897" height="825" alt="image" src="https://github.com/user-attachments/assets/a1baf52e-917d-40b1-a074-edc7fea57c4c" />
 
 ## License
 ISC
