@@ -13,7 +13,12 @@ const createTodoItemTemplate = (item) => {
                 <h3 >${item.title}</h3>
                 <p >${item.status}</p>
             </div>
-            <button hx-delete="/todos/${item.id}" >Delete</button>
+            <button 
+                hx-delete="/todos/${item.id}" 
+                hx-swap="outerHTML" 
+                hx-target="closest li">
+                Delete
+            </button>
         </li>
     `;
 };

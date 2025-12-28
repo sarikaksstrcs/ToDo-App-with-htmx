@@ -41,6 +41,16 @@ app.post('/todos', (req, res) => {
   res.send(createTodoItemTemplate(newTodo));
 });
 
+app.delete('/todos/:id', (req, res) => {
+  const itemId = req.params.id;
+  const itemIndex = TODO_DATA.findIndex(todo => todo.id === itemId);
+  if (itemIndex !== -1) {
+    TODO_DATA.splice(itemIndex, 1);
+  }
+  console.log(TODO_DATA);
+  res.send();
+});
+
 app.listen(3000, () => {
   console.log('App listening on port 3000');
 });
