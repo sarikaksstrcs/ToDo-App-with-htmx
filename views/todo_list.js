@@ -6,10 +6,10 @@ const createTodoListTemplate = (todoItems) => {
 
     const todoItemsHTML = todoItems.map(item => createTodoItemTemplate(item)).join('');
 
-    return `
-        <li class="todo-list">
+    return /*html*/`
+        <ul class="todo-list">
             ${todoItemsHTML}
-        </li>
+        </ul>
     `;
 };
 export default createTodoListTemplate;

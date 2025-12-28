@@ -2,6 +2,7 @@ import express from 'express';
 import createHomePageTemplate from './views/index.js';
 import TODO_DATA from './data/data.js';
 import createTodoListTemplate from './views/todo_list.js';
+import createTodoItemTemplate from './views/components/todo_item.js';
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
@@ -27,6 +28,19 @@ app.post('/toggle-status', (req, res) => {
   res.send(createTodoListTemplate(TODO_DATA));
 }
 );
+
+app.post('/todos', (req, res) => {
+  const newTitle = req.body.title;
+  const newTodo = {
+    id: (TODO_DATA.length + 1).toString(),
+    title: newTitle,
+    status: 'incomplete'
+  };
+  TODO_DATA.push(newTodo);
+  console.log(TODO_DATA);
+  res.send(createTodoItemTemplate(newTodo));
+});
+
 app.listen(3000, () => {
   console.log('App listening on port 3000');
 });
