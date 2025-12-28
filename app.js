@@ -17,18 +17,6 @@ app.post('/clicked', (req, res) => {
   res.send(createTodoListTemplate(TODO_DATA));
 });
 
-app.post('/toggle-status', (req, res) => {
-  const itemId = req.body.id;
-  const item = TODO_DATA.find(todo => todo.id === itemId);
-  if (item) {
-    item.status = item.status === 'complete' ? 'incomplete' : 'complete';
-  }
- 
-  console.log(TODO_DATA);
-  res.send(createTodoListTemplate(TODO_DATA));
-}
-);
-
 app.post('/todos', (req, res) => {
   const newTitle = req.body.title;
   const newTodo = {

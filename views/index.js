@@ -5,12 +5,11 @@ const createHomePageTemplate = () => {
                 <meta charset="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.js"></script>
-                <title>Home Page</title>
+                <title>ToDo APP</title>
                 <link rel="stylesheet" href="/styles.css" />
             </head>
             <body>
-                <h1>Welcome to the Home Page</h1>
-                <p>This is a simple home page template.</p>
+                <h1>To Do List</h1>
                 <div class="todo-list">
                     <button hx-post="/clicked"
                         hx-trigger="click"
